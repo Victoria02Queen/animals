@@ -15,14 +15,7 @@ public class Mouse extends Animal{
         return 5;
     }
 
-    @Override
-    public boolean eat(Item item) {
-        if (item instanceof Berry) {
-            Eatable eatable = (Eatable) item;
-            setFoodLevel(getFoodLevel() + eatable.getFoodLevelIncreasing());
-            eatable.kill();
-            return true;
-        }
-        return false;
+    public boolean isEatable(Item item){
+        return item instanceof Berry ;
     }
 }

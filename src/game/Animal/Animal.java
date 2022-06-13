@@ -2,10 +2,9 @@ package game.Animal;
 
 import game.Coordinates;
 import game.Eatable;
-import game.Eater;
 import game.Item;
 
-public abstract class Animal extends Eatable implements Eater {
+public abstract class Animal extends Eatable {
     private int foodLevel;
     private int speedLevel;
 
@@ -30,4 +29,16 @@ public abstract class Animal extends Eatable implements Eater {
     public void setSpeedLevel(int speedLevel) {
         this.speedLevel = speedLevel;
     }
+
+    public boolean eat(Item item){
+        if (isEatable(item)) {
+            Eatable eatable = (Eatable) item;
+            setFoodLevel(getFoodLevel() + eatable.getFoodLevelIncreasing());
+            eatable.kill();
+            return true;
+        }
+        return false;
+    }
+
+    public abstract boolean isEatable(Item item);
 }

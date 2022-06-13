@@ -15,14 +15,7 @@ public class Fox extends Animal {
         return 2;
     }
 
-    @Override
-    public boolean eat(Item item) {
-        if (item instanceof Rabbit) {
-            Eatable eatable = (Eatable) item;
-            setFoodLevel(getFoodLevel() + eatable.getFoodLevelIncreasing());
-            eatable.kill();
-            return true;
-        }
-        return false;
-    }
+   public boolean isEatable(Item item){
+        return item instanceof Rabbit;
+   }
 }
