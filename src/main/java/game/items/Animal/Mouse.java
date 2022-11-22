@@ -5,9 +5,9 @@ import game.items.parent.Item;
 import game.items.plant.Berry;
 
 public class Mouse extends Animal{
-
-    public Mouse(Coordinates coordinates, int foodLevel, int healthLevel, int speedLevel) {
-        super(coordinates, foodLevel, healthLevel, speedLevel);
+    public int distance;
+    public Mouse(Coordinates coordinates, int foodLevel, int healthLevel, int speedLevel,int distance) {
+        super(coordinates, foodLevel, healthLevel, speedLevel,distance);
     }
 
     @Override

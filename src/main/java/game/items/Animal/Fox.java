@@ -4,9 +4,9 @@ import game.map.Coordinates;
 import game.items.parent.Item;
 
 public class Fox extends Animal {
-
-    public Fox(Coordinates coordinates,  int foodLevel, int healthLevel, int speedLevel) {
-        super(coordinates, foodLevel, healthLevel, speedLevel);
+    public int distance;
+    public Fox(Coordinates coordinates,  int foodLevel, int healthLevel, int speedLevel, int distance) {
+        super(coordinates, foodLevel, healthLevel, speedLevel,distance);
     }
 
     @Override

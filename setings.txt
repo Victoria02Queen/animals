@@ -6,3 +6,4 @@ countBears:4
 countFox:3
 countMouse:5
 countRabbit:2
+distanceOfMove:3

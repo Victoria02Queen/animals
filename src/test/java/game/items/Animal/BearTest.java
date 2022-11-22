@@ -9,8 +9,8 @@ class BearTest {
 
     @Test
     void EatFoxTest() {
-        Bear bear = new Bear(new Coordinates(2,3),7,6,3);
-        Fox  fox = new Fox(new Coordinates(1,2),4,6,13);
+        Bear bear = new Bear(new Coordinates(2,3),7,6,3,1);
+        Fox  fox = new Fox(new Coordinates(1,2),4,6,13,1);
         int meet = bear.getFoodLevel();
         bear.eat(fox);
         int meet2 = bear.getFoodLevel();
@@ -20,9 +20,9 @@ class BearTest {
     }
     @Test
     void canEatAnimal() {
-        Bear bear = new Bear(new Coordinates(2,3),7,6,3);
+        Bear bear = new Bear(new Coordinates(2,3),7,6,3,1);
         Rabbit rabbit = new Rabbit(new Coordinates(1,2),2,6,1);
-        Mouse mouse = new Mouse(new Coordinates(2,3),3,4,6);
+        Mouse mouse = new Mouse(new Coordinates(2,3),3,4,6,2);
         assertTrue(bear.canEat(rabbit));
         assertFalse(bear.canEat(mouse));
     }

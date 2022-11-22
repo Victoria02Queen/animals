@@ -10,7 +10,7 @@ class MouseTest {
 
     @Test
     void EatBerryTest() {
-        Mouse mouse = new Mouse(new Coordinates(2,3),3,4,6);
+        Mouse mouse = new Mouse(new Coordinates(2,3),3,4,6,2);
         Berry berry = new Berry(new Coordinates(1,3));
         int meet = mouse.getFoodLevel();
         mouse.eat(berry);

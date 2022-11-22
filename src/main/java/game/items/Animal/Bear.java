@@ -1,13 +1,14 @@
 package game.items.Animal;
 
+import game.items.abilities.Movable;
 import game.map.Coordinates;
 import game.items.parent.Item;
 import game.items.plant.Berry;
 
 public class Bear extends Animal {
-
-    public Bear(Coordinates coordinates, int foodLevel, int healthLevel, int speedLevel) {
-        super(coordinates, foodLevel, healthLevel, speedLevel);
+    public int distance;
+    public Bear(Coordinates coordinates, int foodLevel, int healthLevel, int speedLevel, int distance) {
+        super(coordinates, foodLevel, healthLevel, speedLevel,distance);
     }
 
 //    @Override

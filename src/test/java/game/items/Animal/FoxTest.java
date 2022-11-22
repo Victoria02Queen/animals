@@ -9,7 +9,7 @@ class FoxTest {
 
     @Test
     void EatRabbitTest() {
-        Fox  fox = new Fox(new Coordinates(1,2),4,6,13);
+        Fox  fox = new Fox(new Coordinates(1,2),4,6,13,4);
         Rabbit rabbit = new Rabbit(new Coordinates(2,3),7,6,3);
         int meet = fox.getFoodLevel();
         fox.eat(rabbit);
@@ -20,9 +20,9 @@ class FoxTest {
     }
     @Test
     void canEatAnimal() {
-        Fox  fox = new Fox(new Coordinates(1,2),4,6,13);
+        Fox  fox = new Fox(new Coordinates(1,2),4,6,13,1);
         Rabbit rabbit = new Rabbit(new Coordinates(2,3),7,6,3);
-        Mouse mouse = new Mouse(new Coordinates(2,3),3,4,6);
+        Mouse mouse = new Mouse(new Coordinates(2,3),3,4,6,2);
         assertTrue(fox.canEat(rabbit));
         assertFalse(fox.canEat(mouse));
     }

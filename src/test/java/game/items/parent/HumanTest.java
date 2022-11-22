@@ -15,7 +15,7 @@ class HumanTest {
 
     @Test
     void killRabbitTest() {
-        Hunter hunter = new Hunter(new Coordinates(3,4));
+        Hunter hunter = new Hunter(new Coordinates(3,4),4);
         Rabbit rabbit = new Rabbit(new Coordinates(2,1), 4,6,7);
         hunter.kill(rabbit);
         assertFalse(rabbit.isAlive());
@@ -23,8 +23,8 @@ class HumanTest {
 
     @Test
     void killNotSupportedAnimalTest() {
-        Hunter hunter = new Hunter(new Coordinates(3,4));
-        Animal animal = new Animal(new Coordinates(2,2),4,3,6) {
+        Hunter hunter = new Hunter(new Coordinates(3,4),1);
+        Animal animal = new Animal(new Coordinates(2,2),4,3,6,1) {
             @Override
             public boolean canEat(Item item) {
                 return false;
@@ -41,7 +41,7 @@ class HumanTest {
 
     @Test
     void killNotAnimalTest() {
-        Hunter hunter = new Hunter(new Coordinates(3,4));
+        Hunter hunter = new Hunter(new Coordinates(3,4),2);
         Berry berry = new Berry(new Coordinates(1,2));
         hunter.kill(berry);
         assertTrue(berry.isAlive());

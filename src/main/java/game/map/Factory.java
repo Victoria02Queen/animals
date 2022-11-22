@@ -7,7 +7,7 @@ import game.items.plant.Berry;
 import java.util.ArrayList;
 
 public class Factory {
-    public static Map createMap(int height, int width, int bears, int berries, int foxes, int mouses, int rabbits, int hunters){
+    public static Map createMap(int height, int width, int bears, int berries, int foxes, int mouses, int rabbits, int hunters, int distance){
 
         ArrayList<Coordinates> freeCoordinates = new ArrayList<>();
 
@@ -23,28 +23,28 @@ public class Factory {
             int pos = random(0,freeCoordinates.size());
             Coordinates coordinates = freeCoordinates.get(pos);
             freeCoordinates.remove(pos);
-            Bear bear = new Bear(coordinates,4,7,9);
+            Bear bear = new Bear(coordinates,4,7,9,5);
             map.setItem(bear, coordinates);
         }
         for (int i = 0; i < foxes; i++){
             int pos = random(0,freeCoordinates.size());
             Coordinates coordinates = freeCoordinates.get(pos);
             freeCoordinates.remove(pos);
-            Fox fox = new Fox(coordinates,4,5,2);
+            Fox fox = new Fox(coordinates,4,5,2,2);
             map.setItem(fox, coordinates);
         }
         for (int i = 0; i < mouses; i++){
             int pos = random(0,freeCoordinates.size());
             Coordinates coordinates = freeCoordinates.get(pos);
             freeCoordinates.remove(pos);
-            Mouse mouse = new Mouse(coordinates,2,3,4);
+            Mouse mouse = new Mouse(coordinates,2,3,4,2);
             map.setItem(mouse, coordinates);
         }
         for (int i = 0; i < rabbits; i++){
             int pos = random(0,freeCoordinates.size());
             Coordinates coordinates = freeCoordinates.get(pos);
             freeCoordinates.remove(pos);
-            Rabbit rabbit = new Rabbit(coordinates,2,3,4);
+            Rabbit rabbit = new Rabbit(coordinates,2,3,4,1);
             map.setItem(rabbit, coordinates);
         }
         for (int i = 0; i < berries; i++){
@@ -58,7 +58,7 @@ public class Factory {
             int pos = random(0,freeCoordinates.size());
             Coordinates coordinates = freeCoordinates.get(pos);
             freeCoordinates.remove(pos);
-            Hunter hunter = new Hunter(coordinates);
+            Hunter hunter = new Hunter(coordinates, distance);
             map.setItem(hunter, coordinates);
         }
         return map;

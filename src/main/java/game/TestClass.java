@@ -10,6 +10,6 @@ public class TestClass {
 
 //        Hunter hunter = new Hunter(new Coordinates(3,4));
 //        hunter.canKill(Rabbit);
-        Bear bear = new Bear(new Coordinates(2,3),4,5,6);
+        Bear bear = new Bear(new Coordinates(2,3),4,5,6,2);
     }
 }
