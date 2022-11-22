@@ -1,4 +1,6 @@
-package game;
+package game.items.parent;
+
+import game.map.Coordinates;
 
 public abstract class Item {
    private Coordinates coordinates;

@@ -1,8 +1,7 @@
-package game.Animal;
+package game.items.plant;
 
-import game.Coordinates;
-import game.Eatable;
-import game.Item;
+import game.map.Coordinates;
+import game.items.parent.Eatable;
 
 public class Berry extends Eatable  {
     @Override

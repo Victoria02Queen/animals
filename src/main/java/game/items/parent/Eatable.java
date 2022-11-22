@@ -1,4 +1,6 @@
-package game;
+package game.items.parent;
+
+import game.map.Coordinates;
 
 public abstract class Eatable extends Item{
      private int healthLevel;
@@ -15,6 +17,10 @@ public abstract class Eatable extends Item{
           this.healthLevel = healthLevel;
      }
      public abstract int getFoodLevelIncreasing();
+
+     public boolean isAlive() {
+          return healthLevel > 0;
+     }
 
      public void kill(){
           healthLevel = 0;

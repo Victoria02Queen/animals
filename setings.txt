@@ -1,0 +1,8 @@
+mapHeight:5
+mapWidth:5
+countBerries:5
+countHunters:2
+countBears:4
+countFox:3
+countMouse:5
+countRabbit:2

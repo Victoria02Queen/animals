@@ -1,8 +1,8 @@
-package game.Animal;
+package game.items.Animal;
 
-import game.Coordinates;
-import game.Eatable;
-import game.Item;
+import game.map.Coordinates;
+import game.items.parent.Item;
+import game.items.plant.Berry;
 
 public class Mouse extends Animal{
 
@@ -15,7 +15,7 @@ public class Mouse extends Animal{
         return 5;
     }
 
-    public boolean isEatable(Item item){
-        return item instanceof Berry ;
+    public boolean canEat(Item item){
+        return item instanceof Berry;
     }
 }

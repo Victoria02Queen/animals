@@ -1,8 +1,8 @@
-package game.Animal;
+package game.items.Animal;
 
-import game.Coordinates;
-import game.Eatable;
-import game.Item;
+import game.map.Coordinates;
+import game.items.parent.Eatable;
+import game.items.parent.Item;
 
 public abstract class Animal extends Eatable {
     private int foodLevel;
@@ -31,7 +31,7 @@ public abstract class Animal extends Eatable {
     }
 
     public boolean eat(Item item){
-        if (isEatable(item)) {
+        if (canEat(item)) {
             Eatable eatable = (Eatable) item;
             setFoodLevel(getFoodLevel() + eatable.getFoodLevelIncreasing());
             eatable.kill();
@@ -40,5 +40,5 @@ public abstract class Animal extends Eatable {
         return false;
     }
 
-    public abstract boolean isEatable(Item item);
+    public abstract boolean canEat(Item item);
 }

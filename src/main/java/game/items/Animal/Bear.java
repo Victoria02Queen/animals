@@ -1,8 +1,8 @@
-package game.Animal;
+package game.items.Animal;
 
-import game.Coordinates;
-import game.Eatable;
-import game.Item;
+import game.map.Coordinates;
+import game.items.parent.Item;
+import game.items.plant.Berry;
 
 public class Bear extends Animal {
 
@@ -21,8 +21,8 @@ public class Bear extends Animal {
 //        return false;
 //    }
 
-    public boolean isEatable(Item item){
-        return item instanceof Rabbit || item instanceof Fox || item instanceof Berry ;
+    public boolean canEat(Item item){
+        return item instanceof Rabbit || item instanceof Fox || item instanceof Berry;
     }
 
     @Override
