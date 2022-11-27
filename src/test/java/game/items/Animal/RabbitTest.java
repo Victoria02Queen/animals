@@ -10,7 +10,7 @@ class RabbitTest {
 
     @Test
     void EatBerryTest() {
-        Rabbit rabbit = new Rabbit(new Coordinates(2,3),3,4,6);
+        Rabbit rabbit = new Rabbit(new Coordinates(2,3),3,4,6,3);
         Berry berry = new Berry(new Coordinates(1,3));
         int meet = rabbit.getFoodLevel();
         rabbit.eat(berry);

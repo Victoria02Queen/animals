@@ -50,4 +50,8 @@ public class Map {
     public Item[][] getMap() {
         return map;
     }
+
+    public Item getItem(Coordinates coordinates){
+        return map[coordinates.getY()][coordinates.getX()];
+    }
 }

@@ -16,7 +16,7 @@ class HumanTest {
     @Test
     void killRabbitTest() {
         Hunter hunter = new Hunter(new Coordinates(3,4),4);
-        Rabbit rabbit = new Rabbit(new Coordinates(2,1), 4,6,7);
+        Rabbit rabbit = new Rabbit(new Coordinates(2,1), 4,6,7,2);
         hunter.kill(rabbit);
         assertFalse(rabbit.isAlive());
     }

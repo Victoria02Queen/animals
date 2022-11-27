@@ -1,26 +1,38 @@
 package game.items.Animal;
 
-import game.items.abilities.Movable;
+import game.items.abilities.MovableItem;
 import game.map.Coordinates;
 import game.items.parent.Eatable;
 import game.items.parent.Item;
 
-public abstract class Animal extends Eatable implements Movable {
+public abstract class Animal extends MovableItem implements Eatable {
     private int foodLevel;
     private int speedLevel;
-    public  int distance;
+    private int healthLevel;
+
 
     public Animal(Coordinates coordinates, int foodLevel, int healthLevel, int speedLevel, int distance) {
-        super(coordinates, healthLevel);
+        super(coordinates, distance);
         this.foodLevel = foodLevel;
         this.speedLevel = speedLevel;
-        this.distance = distance;
-    }
-    @Override
-    public int getDistance(){
-        return distance;
+        this.healthLevel = healthLevel;
     }
 
+    public int getHealthLevel() {
+        return healthLevel;
+    }
+
+    public void setHealthLevel(int healthLevel) {
+        this.healthLevel = healthLevel;
+    }
+
+    public boolean isAlive() {
+        return healthLevel > 0;
+    }
+
+    public void kill(){
+        healthLevel = 0;
+    }
     public int getFoodLevel() {
         return foodLevel;
     }

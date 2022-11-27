@@ -1,6 +1,5 @@
 package game.items.Animal;
 
-import game.items.abilities.Movable;
 import game.map.Coordinates;
 import game.items.parent.Item;
 import game.items.plant.Berry;

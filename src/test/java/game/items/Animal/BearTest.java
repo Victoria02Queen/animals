@@ -21,7 +21,7 @@ class BearTest {
     @Test
     void canEatAnimal() {
         Bear bear = new Bear(new Coordinates(2,3),7,6,3,1);
-        Rabbit rabbit = new Rabbit(new Coordinates(1,2),2,6,1);
+        Rabbit rabbit = new Rabbit(new Coordinates(1,2),2,6,1,4);
         Mouse mouse = new Mouse(new Coordinates(2,3),3,4,6,2);
         assertTrue(bear.canEat(rabbit));
         assertFalse(bear.canEat(mouse));

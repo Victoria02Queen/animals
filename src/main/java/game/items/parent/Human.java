@@ -1,20 +1,14 @@
 package game.items.parent;
 
 import game.items.Animal.Animal;
-import game.items.Animal.Rabbit;
-import game.items.abilities.Movable;
+import game.items.abilities.MovableItem;
 import game.map.Coordinates;
 
-public abstract class Human extends Item implements Movable {
-    public int distance;
+public abstract class Human extends MovableItem {
     public Human(Coordinates coordinates, int distance) {
-        super(coordinates);
+        super(coordinates,distance);
     }
 
-    @Override
-    public int getDistance(){
-        return distance;
-    }
     public void kill(Item item){
         if (!(item instanceof Animal)){
             return;
